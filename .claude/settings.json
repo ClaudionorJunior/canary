@@ -2,6 +2,9 @@
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
   "permissions": {
     "defaultMode": "acceptEdits",
+    "additionalDirectories": [
+      "C:/Users/Adm/Desktop/JabsOT_Servidor"
+    ],
     "allow": [
       "Bash",
       "PowerShell",
@@ -10,7 +13,10 @@
       "WebFetch",
       "Read(~/.claude/**)",
       "Edit(~/.claude/projects/c--Users-Adm-Desktop-canary/memory/**)",
-      "Write(~/.claude/projects/c--Users-Adm-Desktop-canary/memory/**)"
+      "Write(~/.claude/projects/c--Users-Adm-Desktop-canary/memory/**)",
+      "Read(//c/Users/Adm/Desktop/JabsOT_Servidor/**)",
+      "Edit(//c/Users/Adm/Desktop/JabsOT_Servidor/**)",
+      "Write(//c/Users/Adm/Desktop/JabsOT_Servidor/**)"
     ]
   },
   "hooks": {
