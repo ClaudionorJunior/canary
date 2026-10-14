@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "defaultMode": "acceptEdits",
+    "allow": [
+      "Bash",
+      "PowerShell",
+      "mcp__playwright",
+      "WebSearch",
+      "WebFetch",
+      "Read(~/.claude/**)",
+      "Edit(~/.claude/projects/c--Users-Adm-Desktop-canary/memory/**)",
+      "Write(~/.claude/projects/c--Users-Adm-Desktop-canary/memory/**)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|PowerShell",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PROJECT_DIR}/.claude/hooks/pede-confirmacao.mjs\"",
+            "timeout": 10,
+            "statusMessage": "Conferindo se o comando é destrutivo"
+          }
+        ]
+      }
+    ]
+  }
+}
